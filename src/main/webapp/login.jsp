@@ -19,10 +19,14 @@
     justify-content: center;
     flex-direction: column;
     color: deepskyblue;
+    margin: 30px;
+    text-align: center;
+    font-family: 'Darker Grotesque', sans-serif;
 }
 body {
-    background-image: url("https://images.pexels.com/photos/7232493/pexels-photo-7232493.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-image: url("https://images.pexels.com/photos/5878481/pexels-photo-5878481.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
     background-size: cover;
+
 
 }
 </style>
@@ -33,25 +37,27 @@ body {
 <div id="textInfo">
     <h1>Welcome To Your Login Page!</h1>
 
+    <c:if test="${error}">
+        <p>Username or password invalid</p>
+    </c:if>
 
-
-
-    <form action="/login.jsp" method="POST">
+<div class="form-group">
+    <form action="/Login" method="POST">
         <label for="username">Username</label><br>
-        <input type="text" id="username" name="username"><br>
+        <input class="form-control" type="text" id="username" name="username"><br>
         <label for="password">Password</label><br>
-        <input type="password" id="password" name="password"><br>
-        <button type="submit">Submit</button>
+        <input class="form-control" type="password" id="password" name="password"><br>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
     </form>
-
+</div>
 </div>
 
 
-<c:choose>
-    <c:when test="${username == 'admin' && password == 'password'}">
-        <% response.sendRedirect("/profile.jsp"); %>
-    </c:when>
-</c:choose>
+<%--<c:choose>--%>
+<%--    <c:when test="${username == 'admin' && password == 'password'}">--%>
+<%--        <% response.sendRedirect("/profile.jsp"); %>--%>
+<%--    </c:when>--%>
+<%--</c:choose>--%>
 
 
 

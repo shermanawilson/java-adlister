@@ -12,10 +12,12 @@
     <title>Profile</title>
     <style>
         #textProfile{
-            color: white;
+            color: dimgrey;
+            text-align: center;
+            font-family: 'Darker Grotesque', sans-serif;
         }
         body {
-            background-image: url("https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+            background-image: url("https://images.pexels.com/photos/5878521/pexels-photo-5878521.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
             background-size: cover;
 
         }
