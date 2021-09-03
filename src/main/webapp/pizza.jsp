@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-<jsp:include page="partials/links.jsp"/>
+    <jsp:include page="partials/links.jsp"/>
     <title>Pizza Order</title>
 </head>
 <body>
@@ -70,7 +70,7 @@
                 <label class="form-check-label" for="olives">Olives</label>
             </div>
 
-            <input class="btn btn-primary" type="submit" id="submitButton">
+
             <%--    ADDRESS    --%>
 
 
@@ -86,7 +86,7 @@
                             <div class="control-group">
                                 <label class="control-label">Full Name</label>
                                 <div class="controls">
-                                    <input id="full-name" name="full-name" type="text" placeholder="full name"
+                                    <input id="full-name" name="name" type="text" placeholder="full name"
                                            class="input-xlarge">
                                     <p class="help-block"></p>
                                 </div>
@@ -95,7 +95,7 @@
                             <div class="control-group">
                                 <label class="control-label">Address Line 1</label>
                                 <div class="controls">
-                                    <input id="address-line1" name="address-line1" type="text"
+                                    <input id="address-line1" name="addressLine1" type="text"
                                            placeholder="address line 1"
                                            class="input-xlarge">
                                     <p class="help-block">Street address, P.O. box, company name, c/o</p>
@@ -105,7 +105,7 @@
                             <div class="control-group">
                                 <label class="control-label">Address Line 2</label>
                                 <div class="controls">
-                                    <input id="address-line2" name="address-line2" type="text"
+                                    <input id="address-line2" name="addressLine2" type="text"
                                            placeholder="address line 2"
                                            class="input-xlarge">
                                     <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
@@ -124,7 +124,7 @@
                             <div class="control-group">
                                 <label class="control-label">State / Province / Region</label>
                                 <div class="controls">
-                                    <input id="region" name="region" type="text"
+                                    <input id="region" name="state" type="text"
                                            placeholder="state / province / region"
                                            class="input-xlarge">
                                     <p class="help-block"></p>
@@ -134,7 +134,7 @@
                             <div class="control-group">
                                 <label class="control-label">Zip / Postal Code</label>
                                 <div class="controls">
-                                    <input id="postal-code" name="postal-code" type="text"
+                                    <input id="postal-code" name="zip" type="text"
                                            placeholder="zip or postal code"
                                            class="input-xlarge">
                                     <p class="help-block"></p>
@@ -391,8 +391,8 @@
                         </fieldset>
                     </form>
                 </div>
+                <input class="btn btn-primary" type="submit" id="submitButton">
             </div>
-
 
 
 

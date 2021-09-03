@@ -2,6 +2,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Arrays;
 
 @WebServlet(name = "pizza-order", value = "/pizza-order")
 public class PizzaServlet extends HttpServlet {
@@ -19,13 +20,21 @@ public class PizzaServlet extends HttpServlet {
         String sauce = request.getParameter("sauce");
         String size = request.getParameter("size");
 
+        String[] toppings = request.getParameterValues("toppings");
+
         String pepperoni = request.getParameter("pepperoni");
         String mushroom = request.getParameter("mushroom");
         String onions = request.getParameter("onions");
         String olives = request.getParameter("olives");
         String cheese = request.getParameter("cheese");
 
-        String address = request.getParameter("address");
+        String name = request.getParameter("name");
+        String addressLine1 = request.getParameter("addressLine1");
+        String addressLine2 = request.getParameter("addressLine2");
+        String city = request.getParameter("city");
+        String state = request.getParameter("state");
+        String zip = request.getParameter("zip");
+        String country = request.getParameter("country");
 
         System.out.println(crust);
         System.out.println(sauce);
@@ -37,7 +46,14 @@ public class PizzaServlet extends HttpServlet {
         System.out.println(olives);
         System.out.println(cheese);
 
-        System.out.println(address);
+        System.out.println(Arrays.toString(toppings));
+        System.out.println(name);
+        System.out.println(addressLine1);
+        System.out.println(addressLine2);
+        System.out.println(city);
+        System.out.println(state);
+        System.out.println(zip);
+        System.out.println(country);
 
 
 //        if(crust == null) {

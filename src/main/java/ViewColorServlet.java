@@ -5,7 +5,7 @@ import java.io.IOException;
 
 @WebServlet(name = "ViewColorServlet", value = "/viewcolor")
 public class ViewColorServlet extends HttpServlet {
-    @Override
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String userColor = request.getParameter("color");
@@ -15,9 +15,4 @@ public class ViewColorServlet extends HttpServlet {
         request.getRequestDispatcher("/viewcolor.jsp").forward(request,response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-    }
 }
