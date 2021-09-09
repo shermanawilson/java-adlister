@@ -17,6 +17,8 @@ public class Ad {
         this.description = description;
     }
 
+
+
     public long getId() {
         return id;
     }
@@ -47,5 +49,15 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
